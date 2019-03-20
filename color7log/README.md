@@ -1,22 +1,30 @@
-## 1、简介
-    仅对console.log的输出文字颜色做了一些设置
-## 2、使用说明
+### 1、简介
+    设置console.log的输出文字颜色
+### 2、使用说明
     npm install color7log
     const {green} = require('color7log')
     const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // 本人更喜欢这种 简单
     const theme = require('color7log') // theme.green('这里输入绿色文本')
+    black('输出黑色文本')
+    red('输出红色文本')
+    green('输出绿色文本')
+    yellow('输出黄色文本')
+    blue('输出蓝色文本')
+    purple('输出紫色/酒红色文本')
+    cyan('输出蓝绿色文本')
+    white('输出白色文本')
+    gray('输出灰色文本')
 
-    black('输入黑色文本')
-    red('输入红色文本')
-    green('输入绿色文本')
-    yellow('输入黄色文本')
-    blue('输入蓝色文本')
-    purple('输入紫色/酒红色文本')
-    cyan('输入蓝绿色文本')
-    white('输入白色文本')
-    gray('输入灰色文本')
-    如果命令窗或者bash工具窗（如git bash）中输入文字乱码，
+    #### 新增 一行多颜色设置
+    const {custom} = require('color7log')
+    const theme = require('color7log') // theme.custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'})
+    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'}) 支持多个组合输出
+
+    如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
+    有问题欢迎反馈 liwsh666@126.com
+    打个广告 找个山东的女朋友（着急）
+
 ### 1、abstract
     Make some settings only for the output text color of console.log
 ### 2、instuctment
@@ -25,6 +33,12 @@
     const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // i like this style more
     const theme = require('color7log') // theme.green('this text is green')
 
+    #### Add a line of multi-color settings
+    const {custom} = require('color7log')
+    const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
+    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'}) Support multiple combined outputs
+
     green('this text is green')
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.
+    If you have any questions, please send a message to liwsh666@126.com

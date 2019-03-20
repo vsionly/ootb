@@ -1,18 +1,25 @@
 const color = {
-    black: '\x1B[30m%s\x1B[39m',
-    red: '\x1B[31m%s\x1B[39m',
-    green: '\x1B[32m%s\x1B[39m',
-    yellow: '\x1B[33m%s\x1B[39m',
-    blue: '\x1B[34m%s\x1B[39m',
-    purple: '\x1B[35m%s\x1B[39m',
-    cyan: '\x1B[36m%s\x1B[39m',
-    white: '\x1B[37m%s\x1B[39m',
-    gray: '\x1B[90m%s\x1B[39m'
+    black: '\033[40;30m',
+    red: '\033[40;31m',
+    green: '\033[40;32m',
+    yellow: '\033[40;33m',
+    blue: '\033[40;34m',
+    purple: '\033[40;35m',
+    cyan: '\033[40;36m',
+    white: '\033[40;37m',
+    gray: '\033[40;90m'
 };
 let keys = Object.keys(color);
 const log = {};
 for (let k of keys) {
     log[k] = (txt) => console.log(color[k], txt);
+}
+log.custom = (conf) => {
+    let logTxt = '';
+    Object.keys(conf).map(v => {
+        logTxt += color[v] + conf[v] + ' '
+    })
+    console.log(logTxt);
 }
 
 module.exports = log;
