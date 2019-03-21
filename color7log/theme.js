@@ -12,7 +12,9 @@ const color = {
 let keys = Object.keys(color);
 const log = {};
 for (let k of keys) {
-    log[k] = (txt) => console.log(color[k], txt);
+    log[k] = (...txt) => {
+        console.log(color[k], txt.join(' '));
+    }
 }
 log.custom = (conf) => {
     let logTxt = '';

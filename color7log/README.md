@@ -3,10 +3,10 @@
 ### 2、使用说明
     npm install color7log
     const {green} = require('color7log')
-    const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // 本人更喜欢这种 简单
+    const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // 支持多个参数 demo如下
     const theme = require('color7log') // theme.green('这里输入绿色文本')
-    black('输出黑色文本')
-    red('输出红色文本')
+    black('输出黑色文本', '多参数')
+    red('输出红色文本', '多参数', 8)
     green('输出绿色文本')
     yellow('输出黄色文本')
     blue('输出蓝色文本')
@@ -18,7 +18,7 @@
     #### 新增 一行多颜色设置
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'})
-    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'}) 支持多个组合输出
+    custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'}) 支持多个组合输出
 
     如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
@@ -30,7 +30,7 @@
 ### 2、instuctment
     npm install color7log
     const {green} = require('color7log') // use one fun
-    const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // i like this style more
+    const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // Support multiple parameters
     const theme = require('color7log') // theme.green('this text is green')
 
     #### Add a line of multi-color settings
@@ -38,7 +38,8 @@
     const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
     custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'}) Support multiple combined outputs
 
-    green('this text is green')
+    green('this text is green', 11, 'params')
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.
     If you have any questions, please send a message to liwsh666@126.com
+    Make an advertisement, find a girlfriend in Shandong (anxious)
