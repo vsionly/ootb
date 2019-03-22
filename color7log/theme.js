@@ -12,16 +12,23 @@ const color = {
 let keys = Object.keys(color);
 const log = {};
 for (let k of keys) {
+    let tem = ''
     log[k] = (...txt) => {
-        console.log(color[k], txt.join(' '));
+        if(txt.join('').search('\n') !==-1 ) tem = '\n'
+        console.log(color[k], tem + (tem ?' ' : '')+ '> ' + txt.join(' ').replace('\n', '') + '\n');
     }
 }
-log.custom = (conf) => {
+log.custom = (param) => {
     let logTxt = '';
-    Object.keys(conf).map(v => {
-        logTxt += color[v] + conf[v] + ' '
+    Object.keys(param).map((v, k) => {
+    let tem = ''
+        if( k==0 ) {
+            if(param[v].search('\n') !==-1 ) tem = '\n'
+            logTxt += color[v] + tem + ' > '
+        }
+        logTxt += color[v] + param[v].replace('\n', '') + ' '
     })
-    console.log(logTxt);
+    console.log(logTxt + '\n');
 }
 
 module.exports = log;

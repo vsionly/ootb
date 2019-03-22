@@ -20,6 +20,9 @@
     const theme = require('color7log') // theme.custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'})
     custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'}) 支持多个组合输出
 
+    #### 强制log换行（多个log换行）加 \n
+    cyan('\n输出蓝绿色文本')
+
     如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
     有问题欢迎反馈 liwsh666@126.com
@@ -36,9 +39,15 @@
     #### Add a line of multi-color settings
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
-    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'}) Support multiple combined outputs
 
+    ####  Support multiple combined outputs
+    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'})
     green('this text is green', 11, 'params')
+
+    #### Force log wrap (multiple log wrap) add \n
+    cyan('\n输出蓝绿色文本')
+
+
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.
     If you have any questions, please send a message to liwsh666@126.com
