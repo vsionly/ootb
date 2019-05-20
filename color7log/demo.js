@@ -2,7 +2,7 @@ const {black, red, green, yellow, blue, purple, cyan, white, gray, custom} = req
 black('输出黑色文本')
 red('输出红色文本', 8, 11)
 green('输出绿色文本')
-console.log(11111)
+
 yellow('输出黄色文本')
 blue('输出蓝色文本')
 purple('输出紫色/酒红色文本')
