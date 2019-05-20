@@ -1,5 +1,5 @@
 ### 1、简介
-    设置console.log的输出文字颜色
+    设置node中console.log的输出文字颜色
 ### 2、使用说明
     npm install color7log
     const {green} = require('color7log')
@@ -26,7 +26,6 @@
     如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
     有问题欢迎反馈 liwsh666@126.com
-    打个广告 找个山东的女朋友（着急）
 
 ### 1、abstract
     Make some settings only for the output text color of console.log
@@ -51,4 +50,3 @@
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.
     If you have any questions, please send a message to liwsh666@126.com
-    Make an advertisement, find a girlfriend in Shandong (anxious)
