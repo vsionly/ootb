@@ -15,10 +15,10 @@
     white('输出白色文本')
     gray('输出灰色文本')
 
-    #### 新增 一行多颜色设置
+    #### 新增 可以定义输出多个颜色
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'})
-    custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'}) 支持多个组合输出
+    custom({cyan:'组合浅蓝色', red:'组合红', green:'组合绿'}) 支持多个组合输出
 
     #### 强制log换行（多个log换行）加 \n
     cyan('\n输出蓝绿色文本')
@@ -36,14 +36,11 @@
     const {green} = require('color7log') // use one fun
     const {black, red, green, yellow, blue, purple, cyan, white, gray} = require('color7log') // Support multiple parameters
     const theme = require('color7log') // theme.green('this text is green')
+    red('red 1', 'red 2', 'red 1')
 
-    #### Add a line of multi-color settings
+    #### Add multi-color settings
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
-
-    ####  Support multiple combined outputs
-    custom({cyan:'浅蓝色', red:'组合红:', green:'组合绿'})
-    green('this text is green', 11, 'params')
 
     #### Force log wrap (multiple log wrap) add \n
     cyan('\n输出蓝绿色文本')
