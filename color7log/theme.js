@@ -11,24 +11,40 @@ const color = {
 };
 let keys = Object.keys(color);
 const log = {};
+
+// 输出不同颜色的信息
 for (let k of keys) {
-    let tem = ''
     log[k] = (...txt) => {
-        if(txt.join('').search('\n') !==-1 ) tem = '\n'
-        console.log(color[k], tem + (tem ?' ' : '')+ '> ' + txt.join(' ').replace('\n', '') + '\n');
+        logFun(txt, k)
+    }
+    log[k+'Fmt'] = (...txt) => {
+        let sign = txt.pop()
+        let arr = []
+        arr.length = 31
+        console.log(color[k], '\n' + arr.join(sign))
+        logFun(txt, k)
+        console.log(color[k], '\n' + arr.join(sign) + '\n', '\033[40;37m')
     }
 }
+
+const logFun = (txt, k) => {
+    txt.map((v, i) => {
+        console.log(color[k], '\n', v);
+    })
+}
+
+// 支持多个组合输出 custom({cyan:'组合浅蓝色', red:'组合红', green:'组合绿'})
 log.custom = (param) => {
     let logTxt = '';
     Object.keys(param).map((v, k) => {
     let tem = ''
         if( k==0 ) {
-            if(param[v].search('\n') !==-1 ) tem = '\n'
-            logTxt += color[v] + tem + ' > '
+
+            logTxt += color[v] + tem + ' '
         }
         logTxt += color[v] + param[v].replace('\n', '') + ' '
     })
-    console.log(logTxt + '\n');
+    console.log('\n' + logTxt);
 }
 
 module.exports = log;
