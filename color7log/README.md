@@ -15,14 +15,18 @@
     white('输出白色文本')
     gray('输出灰色文本')
 
-    #### 新增 可以定义输出多个颜色
+    #### 1）新增 可以定义输出多个颜色
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'浅蓝色', red:'组合红', green:'组合绿'})
     custom({cyan:'组合浅蓝色', red:'组合红', green:'组合绿'}) 支持多个组合输出
 
-    #### 新增 可以定义格式化字符
+    #### 2）新增可以定义格式化字符 每个颜色方法后加Fmt 例如
     const {redFmt} = require('color7log')
     redFmt('输出灰色文本', '-')  将以多个‘-’符号作为分割线输出内容
+
+    #### 3）新增默认格式化字符'-' 每个颜色方法后加F 例如
+    const {redF} = require('color7log')
+    redF('输出灰色文本')  将以多个‘-’符号作为分割线输出内容
 
     如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
@@ -42,6 +46,10 @@
     #### Add multi-color settings
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
+
+    #### New You can define formatting characters. Add Fmt after each color method. for example
+    Const {redFmt} = require('color7log')
+    redFmt ('output gray text', '-') will output content with multiple '-' symbols as split lines
 
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.

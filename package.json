@@ -1,9 +1,18 @@
 {
   "dependencies": {
+    "cache-content-type": "^1.0.1",
+    "cheerio": "^1.0.0-rc.3",
     "color7log": "^1.0.1",
+    "delegates": "^1.0.0",
+    "destroy": "^1.0.4",
+    "ee-first": "^1.1.1",
+    "http-assert": "^1.4.1",
+    "http-errors": "^1.7.3",
+    "iconv-lite": "^0.5.0",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "zlib": "^1.0.5"
   },
   "name": "ootb",
   "version": "1.0.0",

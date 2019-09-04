@@ -25,6 +25,9 @@ for (let k of keys) {
         logFun(txt, k)
         console.log(color[k], '\n' + arr.join(sign) + '\n', '\033[40;37m')
     }
+    log[k+'F'] = (...txt) => {
+        log[k+'Fmt'](...txt, '-')
+    }
 }
 
 const logFun = (txt, k) => {

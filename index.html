@@ -14,13 +14,18 @@
     <script type="text/javascript">
         function get() {
             var xhr = new XMLHttpRequest();
-            xhr.responseType = "blob";
+            // xhr.responseType = "blob";
             xhr.open('GET', 'getlist', true);
             xhr.onreadystatechange = function() {
               // readyState == 4说明请求已完成
               if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) {
                 // 从服务器获得数据
-                console.log(xhr.response)
+                var data = xhr.response.replace(/\s/g, '').replace(/\r\n\t/g, '')
+                console.log(xhr.response.length, data.length, data)
+                xhr.response = xhr.response.replace(/\s/g, '')
+                var reg = /\<divclass\=\"iSelectList\">(.*)\<\/div>/g
+                var result = reg.exec(data)
+                console.log(result, 88)
               }
             };
             xhr.send();
