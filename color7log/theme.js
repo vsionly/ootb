@@ -21,9 +21,11 @@ for (let k of keys) {
         let sign = txt.pop()
         let arr = []
         arr.length = 31
-        console.log(color[k], '\n' + arr.join(sign))
-        logFun(txt, k)
-        console.log(color[k], '\n' + arr.join(sign) + '\n', '\033[40;37m')
+        txt.map((v, i) => {
+            console.log(color[k], '\n' + arr.join(sign))
+            console.log(color[k], '\n', v);
+            console.log(color[k], '\n' + arr.join(sign) + '\n', '\033[40;37m')
+        })
     }
     log[k+'F'] = (...txt) => {
         log[k+'Fmt'](...txt, '-')

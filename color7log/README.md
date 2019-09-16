@@ -28,6 +28,9 @@
     const {redF} = require('color7log')
     redF('输出灰色文本')  将以多个‘-’符号作为分割线输出内容
 
+    #### 4）优化格式化字符的样式
+    redFmt('参数1', '参数2', '-')  将以多个‘-’符号作为分割线分别输出内容，看上去更容易区别
+
     如果命令窗或者bash工具窗（如git bash）中输出文字乱码，
     请在对应工具的选项的子菜单中 修改text设置为cn utf8
     有问题欢迎反馈 liwsh666@126.com
@@ -43,13 +46,20 @@
     const theme = require('color7log') // theme.green('this text is green')
     red('red 1', 'red 2', 'red 1')
 
-    #### Add multi-color settings
+    #### 1) Add multi-color settings
     const {custom} = require('color7log')
     const theme = require('color7log') // theme.custom({cyan:'this text'color is cyan', red:'this text'color is red', green:'this text'color is green'})
 
-    #### New You can define formatting characters. Add Fmt after each color method. for example
+    #### 2) New You can define formatting characters. Add Fmt after each color method. for example
     Const {redFmt} = require('color7log')
     redFmt ('output gray text', '-') will output content with multiple '-' symbols as split lines
+
+    #### 3) Add the default formatting character '-' to each color method followed by F
+    Const {redF} = require('color7log')
+    redF ('output gray text') will output content with multiple ‘-’ symbols as split lines
+
+    #### 4) Optimize the style of formatting characters
+    redFmt('parameter 1', 'parameter 2', '-') will output parameter 1 and parameter 2 with multiple ‘-’ symbols as split lines, which seems to be easier to distinguish
 
     If the input text is garbled in the command window or git bash,
     modify the encoding of the command tool to your own standard encoding.
