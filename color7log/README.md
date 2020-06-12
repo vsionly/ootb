@@ -54,9 +54,9 @@
     Const {redFmt} = require('color7log')
     redFmt ('output gray text', '-') will output content with multiple '-' symbols as split lines
 
-    #### 3) Add the default formatting character '-' to each color method followed by F
-    Const {redF} = require('color7log')
-    redF ('output gray text') will output content with multiple ‘-’ symbols as split lines
+    #### 3) Add the default formatting character '-' to each method followed by F
+    Const {redF} = require('color7log')    
+    redF ('output gray text') will output content with multiple ‘-’ symbols as split lines
 
     #### 4) Optimize the style of formatting characters
     redFmt('parameter 1', 'parameter 2', '-') will output parameter 1 and parameter 2 with multiple ‘-’ symbols as split lines, which seems to be easier to distinguish

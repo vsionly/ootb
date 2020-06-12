@@ -1,6 +1,6 @@
 {
   "name": "color7log",
-  "version": "1.3.0",
+  "version": "1.4.2",
   "description": "a simple log only with color",
   "main": "theme.js",
   "scripts": {
